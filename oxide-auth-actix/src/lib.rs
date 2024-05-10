@@ -119,6 +119,11 @@ pub struct OAuthRequest {
 }
 
 impl OAuthResponse {
+    /// Get the status from `OAuthResponse`
+    pub fn get_status(&self) -> StatusCode {
+        self.status.clone()
+    }
+
     /// Get the headers from `OAuthResponse`
     pub fn get_headers(&self) -> HeaderMap {
         self.headers.clone()
